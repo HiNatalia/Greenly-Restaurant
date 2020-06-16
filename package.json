@@ -2,7 +2,7 @@
   "name": "greenly_restaurant",
   "version": "1.0.0",
   "description": "Website for portfolio",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "/test"
   },
