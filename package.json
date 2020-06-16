@@ -1,0 +1,20 @@
+{
+  "name": "greenly_restaurant",
+  "version": "1.0.0",
+  "description": "Website for portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "restaurante"
+  },
+  "keywords": [
+    "vegetarian",
+    "restaurante",
+    "page"
+  ],
+  "author": "Natalia Niedziela",
+  "license": "ISC"
+}
