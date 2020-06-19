@@ -1,1 +1,23 @@
 /*margin, padding, fonts, colors\/*/
+:root{
+    --primary-color: #B9C904;
+    --secondary-color: #FFFFFF; 
+    --teritary-color: #F7AE96;
+    --quaternary-color: #434343;
+
+    --primary-font-color: #FFFFFF;
+    --secondary-font-color:#69686A;
+    --secondary-font-color-lighter:#C4C1C8;
+    --teritary-font-color: #434263;
+    --quaternary-font-color: #B9C904;
+    --additiona-font-color: #F7AE96;
+}
+
+*, 
+*::after, 
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
