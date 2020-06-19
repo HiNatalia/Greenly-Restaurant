@@ -55,7 +55,10 @@ body{
     background-color: var(--additiona-font-color);
 }
 
-
+.btn:hover{
+    background-color: var(--teritary-font-color);
+    transition: .2s ease-in-out;
+}
 
 .icon{
     width: 1.5rem;
@@ -64,9 +67,7 @@ body{
    
     
 }
-.about_social_icons{
-    
-}
+
 .icon--white{
     fill: var( --primary-font-color);
 }
