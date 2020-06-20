@@ -16,44 +16,37 @@
     align-items: center;
     padding: 1rem 2rem;
     height: 3rem;
-    
-  
 }
 
 .nav_logo{
 
 }
 
-.nav_list{
+.nav__list{
     list-style: none;
     display: flex;
     
 
 }
-.nav_list_item{
+.nav__list__item{
     text-decoration: none;
     margin: 0 1rem;
     color: var(--primary-font-color);
 }
 
-.nav_list_item:hover{
+.nav__list__item:hover{
    
 }
 
-.header_heading-box{
+.header__heading-box{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem 2rem;
     min-height: 55vh;
     width: 50vw;
-   
     background-color: var(--secondary-color);
     box-shadow: 1px 0 6px var(--secondary-font-color-lighter);
-    
-    
-    
- 
 }
 
 
@@ -61,7 +54,7 @@
   
   
 }
-.data_container{
+.data__container{
     height: 3rem;
     display: flex;
     justify-content: flex-start;   
@@ -70,7 +63,7 @@
     color: var(--primary-font-color);
 }
 
-.data_container_n{
+.data__container__n{
     margin: 0 3rem;
     display: flex;
     align-items: center;

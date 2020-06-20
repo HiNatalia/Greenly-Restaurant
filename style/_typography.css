@@ -15,8 +15,11 @@ body{
 .heading--blue{
     color: var(--teritary-font-color);
 }
-.heagin-white{
+.heagin--white{
     color: var(--primary-font-color);
+}
+.heading--green{
+    color: var(--quaternary-font-color);
 }
 
 .paragraph{
@@ -27,6 +30,9 @@ body{
 }
 .paragraph--grey{
     color: var( --secondary-font-color-lighter);
+}
+.paragraph--darkGrey{
+    color: var( --secondary-font-color);
 }
 
 .paragraph--decor{
@@ -54,7 +60,9 @@ body{
 .btn--pink{
     background-color: var(--additiona-font-color);
 }
-
+.btn--submit{
+    border: none;
+}
 .btn:hover{
     background-color: var(--teritary-font-color);
     transition: .2s ease-in-out;
@@ -64,8 +72,6 @@ body{
     width: 1.5rem;
     height: 1.5rem;
     margin: 0 .75rem;
-   
-    
 }
 
 .icon--white{
@@ -73,9 +79,7 @@ body{
 }
 .icon--green{ 
     fill: var( --quaternary-font-color);
-   
 }
 .icon--blue{
-    fill: var(--teritary-font-color);
-    
+    fill: var(--teritary-font-color); 
 }

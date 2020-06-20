@@ -1,0 +1,62 @@
+.reservation {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.753), rgba(255, 255, 255, 0.788)), url(../img/sections/reservation.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;   
+}
+
+.reservation__decorBorder{
+    min-width: 50rem;
+    min-height: 30rem;
+    border: .1rem solid var(--primary-font-color);
+    background-color: none;
+    position: absolute;
+    z-index: 1;
+}
+.reservation__text {
+    text-align: center;
+    width: 75%;
+}
+
+.reservation__form {
+    display: grid;
+    grid-gap: .5rem 1rem;
+    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-columns: min-content min-content;
+    position: relative;
+    z-index: 2;
+   
+}
+
+.reservation__form__input {
+    font-size: .75rem;
+    font-family: 'Raleway';
+    color: var(--secondary-font-color-lighter);
+    padding: .5rem;
+    border: none;
+    box-shadow: 1px 3px 2px var(--secondary-font-color-lighter);
+
+
+}
+
+.reservation__form__input::placeholder {
+    color: var(--secondary-font-color-lighter);
+    
+}
+
+.btn--submit {
+    grid-column: 1 /3;
+    justify-self: center;
+}
+
+.reservation__form__input:focus{
+    outline: none;
+}
