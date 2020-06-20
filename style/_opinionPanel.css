@@ -1,0 +1,40 @@
+.opinions{
+    background-color: var(--primary-color);
+    height: min-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.opinions__opinion_n__img{
+    width: 11.5rem;
+    height: 8rem;
+    clip-path: circle(40%);
+  
+  
+}
+.opinions__opinion_n{
+    display: flex;
+    flex-direction: row;
+   
+    align-items: center;
+
+}
+.opinions__opinion_n__text{
+   
+}
+
+.opinions__menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.opinions__menu__circle{
+    margin: .5rem .25rem;
+    width: 1rem;
+    height: 1rem;
+    clip-path: circle(40%);
+    background-color: var(--secondary-color);
+}

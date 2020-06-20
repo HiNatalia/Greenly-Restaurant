@@ -1,5 +1,5 @@
-.main > *{
-padding: 3rem 2rem;
+.main > * {
+    padding: 3rem 4rem;
 }
 
 
@@ -64,4 +64,23 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+
+
+.newsletter{
+    height: min-content;
+    background-color: var(--primary-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+ 
+}
+.newsletter__form{
+    
+    display: flex;
+ 
+   
 }

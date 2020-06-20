@@ -10,12 +10,14 @@ body{
 
 .heading{
     font-size: 3rem;
+    font-weight: normal;
 
 }
+
 .heading--blue{
     color: var(--teritary-font-color);
 }
-.heagin--white{
+.heading--white{
     color: var(--primary-font-color);
 }
 .heading--green{
@@ -51,10 +53,11 @@ body{
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    color: var(--primary-font-color);
 }
 
 .btn--green{
-    color: var(--primary-font-color);
+    
     background-color: var(--quaternary-font-color);
 }
 .btn--pink{
@@ -79,6 +82,7 @@ body{
 }
 .icon--green{ 
     fill: var( --quaternary-font-color);
+
 }
 .icon--blue{
     fill: var(--teritary-font-color); 
