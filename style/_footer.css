@@ -1,14 +1,17 @@
-.footer {
+.footer__nav {
     background-color: var(--footer-color);
     height: min-content;
-    padding: 2rem 0;
+    padding: 2rem 5rem;
     width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
+
 }
 
-.footer__menu {}
+.footer__menu {
+    padding: 0 2.5rem;
+}
 
 .footer__menu__list {
     list-style: none;
@@ -21,18 +24,20 @@
 }
 
 .footer__logoSocial {
+    padding: 0 2.5rem;
     text-align: center;
     border-left: 1px solid var(--primary-font-color);
     border-right: 1px solid var(--primary-font-color);
 }
 
-.footer__logoSocia__icons{
+.footer__logoSocial__icons{
+    
     text-align: center;
 }
 
 
 .footer__location{
-    
+    padding: 0 2.5rem;
 
 }
 .footer__location__text span{
@@ -50,4 +55,12 @@
 .footer__author{
     height: 2rem;
     background-color: var(--primary-color);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.footer__author .paragraph{
+    font-size: .75rem;
 }
