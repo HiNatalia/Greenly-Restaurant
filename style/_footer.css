@@ -3,9 +3,7 @@
     height: min-content;
     padding: 2rem 5rem;
     width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+   
 
 }
 
@@ -38,7 +36,6 @@
 
 .footer__location{
     padding: 0 2.5rem;
-
 }
 .footer__location__text span{
     display: flex;
@@ -56,10 +53,6 @@
     height: 2rem;
     background-color: var(--primary-color);
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
 }
 .footer__author .paragraph{
     font-size: .75rem;
