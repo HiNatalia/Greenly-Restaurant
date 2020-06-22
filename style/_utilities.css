@@ -10,6 +10,30 @@
 .margin-top-2{
     margin-top: 2rem;
 }
+.margin-topBottom-1{
+    margin: 1rem 0;
+}
+.margin-topBottom-2{
+    margin: 2rem 0;
+}
+.padding-topBottom-1{
+    padding: 1rem 0;
+}
+.padding-1{
+    padding: 1rem;
+}
+.padding-2{
+    padding: 2rem;
+}
+.padding-leftRight-4{
+    padding: 0 4rem;
+}
+.padding-leftRight-1{
+padding: 0 1rem;
+}
+.padding-leftRight-2{
+    padding: 0 2rem;
+}
 
 .flex-center{
     display: flex;

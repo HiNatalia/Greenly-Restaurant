@@ -16,7 +16,7 @@
 }
 .reservation__text {
     text-align: center;
-    width: 75%;
+    width: 70%;
 }
 
 .reservation__form {
@@ -28,12 +28,13 @@
     font-size: .75rem;
     font-family: 'Raleway';
     color: var(--secondary-font-color-lighter);
-    padding: .5rem;
+
     border: none;
     box-shadow: 1px 3px 2px var(--secondary-font-color-lighter);
+    padding: .5rem .5rem;
 }
 
-.reservation__form__input::placeholder {
+.reservation__form__input::placeholder{
     color: var(--secondary-font-color-lighter);  
 }
 

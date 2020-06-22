@@ -1,6 +1,5 @@
 .main > * {
-    padding: 2rem 3rem;
-    margin: 3rem 0;
+    margin: 4.5rem 0;
 }
 
 .about__imgContainer, .menu__imgContainer{
@@ -29,7 +28,7 @@ img{
     position: relative;
 }
 .about__text{
-    padding: 0 3rem;
+  
     width: 40vw; 
     height: 75vh;
     
@@ -40,13 +39,13 @@ img{
     align-items: center;
 }
 .about__social__icons{
-    margin-left: 1rem;
+    
 }
 
 
 .menu__text{
     
-    padding: 0 3rem;
+ 
     width: 40vw; 
     height: 75vh;
    

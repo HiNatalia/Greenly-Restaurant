@@ -10,7 +10,7 @@
 }
 
 .opinions__menu__circle{
-    margin: .5rem .25rem;
+   
     width: 1rem;
     height: 1rem;
     clip-path: circle(40%);
