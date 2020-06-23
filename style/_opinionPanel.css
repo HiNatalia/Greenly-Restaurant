@@ -6,7 +6,9 @@
 .opinions__opinion_n__img{
     width: 11.5rem;
     height: 8rem;
+  
     clip-path: circle(40%); 
+ 
 }
 
 .opinions__menu__circle{
