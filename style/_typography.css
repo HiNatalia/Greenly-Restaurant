@@ -88,3 +88,6 @@ body{
 .icon--blue{
     fill: var(--teritary-font-color); 
 }
+.icon--darkGrey{
+    fill: var(--secondary-font-color);
+}

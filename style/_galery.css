@@ -1,7 +1,7 @@
 
 .galery__img{
-    width: 473.3px;
-    min-height: 315px;
+    width: 16.9rem ; /*473.3px x 315/*/
+    min-height: 11.25rem;
     cursor: pointer;
     
 
