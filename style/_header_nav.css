@@ -9,6 +9,9 @@
 .header-galery{
     background: url(../img/sections/about\ us.jpg) right no-repeat fixed;
 }
+.header-order{
+    background: url(../img/sections/menu.jpg) right no-repeat fixed;
+}
 .nav{
     display: flex;
     justify-content: space-between;
