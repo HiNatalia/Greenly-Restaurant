@@ -1,8 +1,11 @@
-
+.galery{
+   
+}
 .galery__img{
     width: 16.9rem ; /*473.3px x 315/*/
     min-height: 11.25rem;
     cursor: pointer;
+   
     
 
 }
