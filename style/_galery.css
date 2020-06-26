@@ -1,11 +1,124 @@
 .galery{
    
 }
-.galery__img{
+.galery__image{
     width: 16.9rem ; /*473.3px x 315/*/
     min-height: 11.25rem;
     cursor: pointer;
-   
+
+    background-position: center;
+    background-repeat: no-repeat; 
     
+}
+
+.galery__zoomWindow{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba( 0, 0, 0, .9);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.galery__zoomWindow__btn{
+    display: block;
+    margin: 0 2rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--secondary-font-color-lighter);
+    
+}
+
+.galery__zoomWindow__btn:hover{
+    background-color: var( --primary-font-color);
+}
+.galery__zoomWindow__btn--next{
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
 
 }
+.galery__zoomWindow__btn--prev{
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+.galery__zoomWindow img{
+ 
+    width: auto;
+    min-height: 75%;
+    max-width: 80%;
+    max-height: 90%;
+    
+}
+
+.galery__image__1{
+    background-image: url('../img/galery/1.jpg');
+}
+.galery__image__2{
+    background-image: url('../img/galery/2.jpg');
+
+}
+
+.galery__image__3{
+    background-image: url('../img/galery/3.jpg');
+
+}
+
+.galery__image__4{
+    background-image: url('../img/galery/4.jpg');
+
+}
+
+.galery__image__5{
+    background-image: url('../img/galery/5.jpg');
+
+}
+
+.galery__image__6{
+    background-image: url('../img/galery/6.jpg');
+
+}
+
+
+.galery__image__7{
+    background-image: url('../img/galery/7.jpg');
+
+}
+
+.galery__image__8{
+    background-image: url('../img/galery/8.jpg');
+
+}
+
+.galery__image__9{
+    background-image: url('../img/galery/9.jpg');
+
+}
+
+.galery__image__10{
+    background-image: url('../img/galery/10.jpg');
+
+}
+
+.galery__image__11{
+    background-image: url('../img/galery/11.jpg');
+
+}
+.galery__image__12{
+    background-image: url('../img/galery/12.jpg');
+
+}
+.galery__image__13{
+    background-image: url('../img/galery/13.jpg');
+
+}
+.galery__image__14{
+    background-image: url('../img/galery/14.jpg');
+
+}
+.galery__image__15{
+    background-image: url('../img/galery/15.jpg');
+
+}
+
