@@ -4,7 +4,9 @@ let lastOpenedImg;
 
 images.forEach(img => {
     img.addEventListener('click', () => {
-        let index = img;
+        index = lastOpenedImg;
+        alert(index);
+       
         let cssRules = window.getComputedStyle(img);
         let imgFullUrl = cssRules.getPropertyValue('background-image');
         let imgUrl = imgFullUrl.split('/img/galery/');
