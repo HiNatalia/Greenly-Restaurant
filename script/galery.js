@@ -1,80 +1,96 @@
-let images = document.querySelectorAll('.galery__image');
+const images = document.querySelectorAll('.galery__image');
 let lastOpenedImg;
 
+images.forEach(function (img, index){
 
-images.forEach(img => {
     img.addEventListener('click', () => {
-        index = lastOpenedImg;
-        alert(index);
-       
-        let cssRules = window.getComputedStyle(img);
-        let imgFullUrl = cssRules.getPropertyValue('background-image');
-        let imgUrl = imgFullUrl.split('/img/galery/');
-        let newUrl = imgUrl[1].replace('")', '');
 
-        lastOpenedImg = index + 1;
-        
+        let imageUrl = getUrl(img);
 
-        let container = document.body;
-        let imgZoomWindow = document.createElement('div');
-        container.appendChild(imgZoomWindow);
-        imgZoomWindow.classList.add('galery__zoomWindow');
+        lastOpenedImg = index;
 
-        imgZoomWindow.addEventListener('click', () => {
-            imgZoomWindow.classList.remove('galery__zoomWindow');
-            container.removeChild(imgZoomWindow);
-        },)
+        createWindow(imageUrl);
 
-
-        let zoomImg = document.createElement('img');
-        imgZoomWindow.appendChild(zoomImg);
-        zoomImg.setAttribute('src', '../img/galery/' + newUrl);
-        zoomImg.setAttribute('id', 'current-img');
-
-
-        zoomImg.onload = () =>{
-            let btnNext = document.createElement('a');
-            imgZoomWindow.appendChild(btnNext);
-            btnNext.classList.add('galery__zoomWindow__btn');
-            btnNext.classList.add('galery__zoomWindow__btn--next');
-            btnNext.setAttribute('click', 'changeImg()');
-
-
-            let btnPrev = document.createElement('a');
-            imgZoomWindow.prepend(btnPrev);
-            btnPrev.classList.add('galery__zoomWindow__btn');
-            btnPrev.classList.add('galery__zoomWindow__btn--prev');
-        }
     },)
+
+})
+
+function getUrl(element){
+    let cssElement = window.getComputedStyle(element);
+    let cssElementProperty = cssElement.getPropertyValue('background-image');
+    let urlElement = cssElementProperty.split('/img/galery/');
+    let finalUrl = urlElement[1].replace('")', '');
+
+    return finalUrl;
+}
+
+function createWindow(imageUrl){
+
+    //window
+    let container = document.body;
+    let imgWindow = document.createElement('div');
+    container.appendChild(imgWindow);
+    imgWindow.setAttribute('class', 'galery__zoomWindow');
+
+    //img
+    let img = document.createElement('img');
+    imgWindow.appendChild(img);
+    img.setAttribute('src', `../img/galery/${imageUrl}`);
+    img.setAttribute('id', 'current-img');
+   
+
+    //btns 
+    let btnNext = document.createElement('a');
+    container.appendChild(btnNext);
+    btnNext.setAttribute('class','galery__zoomWindow__btn galery__zoomWindow__btn--next');
     
+    let btnPrev = document.createElement('a');
+    container.appendChild(btnPrev);
+    btnPrev.setAttribute('class','galery__zoomWindow__btn galery__zoomWindow__btn--prev');
 
-});
+    //events
+    imgWindow.addEventListener('click', closeWindow);
+    btnNext.addEventListener('click', changeImg('next'));
+    btnPrev.addEventListener('click', changeImg('prev'));
+}
 
-function changeImg(changeDir){
-    document.querySelector('#current-img').remove;
 
-    let getImgWindow = document.querySelector('imgZoomWindow');
+
+function changeImg(changeType){
+   
+    document.querySelector('#current-img').remove();
+  
+   
+    let imgWindow = document.querySelector('.galery__zoomWindow');
     let newImg = document.createElement('img');
-    getImgWindow.appendChild(newImg);
+    imgWindow.appendChild(newImg);
 
-    let calcNewImg;
+    let newImgIndex;
 
-    if(changeDir === 1){
-        calcNewImg = lastOpenedImg + 1;
+    if(changeType === 'next'){
+        newImgIndex = lastOpenedImg + 1;
 
-        if( calcNewImg > images.length){
-            calcNewImg = 1;
+        if(newImgIndex > images.length){
+            newImgIndex = 1;
         }
-    }else if(changeDir === 0){
-        calcNewImg = lastOpenedImg - 1;
-        if( calcNewImg < 1){
-            calcNewImg = images.length;
+    }else if( changeType === 'prev'){
+        newImgIndex = lastOpenedImg - 1;
+
+        if(newImgIndex < 1){
+            newImgIndex = images.length;
         }
     }
 
-    newImg.setAttribute('src', `../img/galery/${calcNewImg}.jpg`);
-    newImg.setAttribute('id', '#current-img');
 
-    lastOpenedImg = calcNewImg;
+    newImg.setAttribute('src', `../img/galery/${newImgIndex}.jpg`);
+    newImg.setAttribute('id', 'current-img');
 
+    lastOpenedImg = newImgIndex;
+}
+
+
+function closeWindow(){
+    document.querySelector('.galery__zoomWindow').remove();
+    document.querySelector('.galery__zoomWindow__btn').remove();
+    document.querySelector('.galery__zoomWindow__btn').remove();
 }
