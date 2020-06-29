@@ -7,7 +7,7 @@ images.forEach(function (img, index){
 
         let imageUrl = getUrl(img);
 
-        lastOpenedImg = index;
+        lastOpenedImg = index + 1;
 
         createWindow(imageUrl);
 
@@ -49,9 +49,10 @@ function createWindow(imageUrl){
     btnPrev.setAttribute('class','galery__zoomWindow__btn galery__zoomWindow__btn--prev');
 
     //events
+    btnNext.setAttribute('onclick', 'changeImg("next")');
+    btnPrev.setAttribute('onclick', 'changeImg("prev")');
     imgWindow.addEventListener('click', closeWindow);
-    btnNext.addEventListener('click', changeImg('next'));
-    btnPrev.addEventListener('click', changeImg('prev'));
+
 }
 
 
