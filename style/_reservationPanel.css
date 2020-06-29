@@ -55,3 +55,27 @@ input[type=number] {
 .reservation__form__input:focus, .newsletter__form__input:focus{
     outline: none;
 }
+
+
+.reservation__result{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100vw;
+    height: 3rem;
+    background-color: var(--teritary-font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s linear;
+   
+}
+
+.reservation__result p{
+  
+   padding: .1rem 0;
+    color: var(--primary-font-color);
+    font-size: .5rem;
+}
