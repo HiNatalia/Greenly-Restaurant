@@ -33,7 +33,7 @@ input[type=number] {
     -moz-appearance: textfield;
   }
 
-.reservation__form__input {
+.reservation__form__input, .newsletter__form__input {
     font-size: .75rem;
     font-family: 'Raleway';
     color: var(--secondary-font-color-lighter);
@@ -43,7 +43,7 @@ input[type=number] {
     padding: .5rem .5rem;
 }
 
-.reservation__form__input::placeholder{
+.reservation__form__input::placeholder, .newsletter__form__input::placeholder{
     color: var(--secondary-font-color-lighter);  
 }
 
@@ -52,6 +52,6 @@ input[type=number] {
     justify-self: center;
 }
 
-.reservation__form__input:focus{
+.reservation__form__input:focus, .newsletter__form__input:focus{
     outline: none;
 }
