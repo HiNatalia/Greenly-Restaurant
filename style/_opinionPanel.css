@@ -5,10 +5,16 @@
     height: 40vh;
    
    
+   
 }
 .opinions__opinion__n{
     width: 90%;
-    margin: 0 auto;
+    margin-right: -200%;    
+    
+}
+.opinions__opinion__n--active{
+  
+   animation: slidersAnimation 10s ease-in-out 0s 1 normal none;
 }
 
 .opinions__opinion_n__img{
@@ -61,3 +67,25 @@
 }
 
 
+@keyframes slidersAnimation{
+    0%{
+        margin-right: -200%;    
+    }
+
+    30%{
+        margin-right:0; 
+    }
+    35%{
+        margin-right:-5%; 
+    }
+    40%{
+        margin-right:0; 
+    }
+    70%{
+        margin-right:0; 
+    }
+    100%{
+        margin-right: 200%;
+    }
+
+}

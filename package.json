@@ -15,5 +15,6 @@
     "restaurant"
   ],
   "author": "Natalia Niedziela",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }
