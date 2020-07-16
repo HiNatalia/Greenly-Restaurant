@@ -1,55 +1,52 @@
 function opinionObj(img, name, opinion, button) {
     this.img = img,
-        this.name = name,
-        this.opinion = opinion,
-        this.button = button,
+    this.name = name,
+    this.opinion = opinion,
+    this.button = button,
 
-        this.create = function () {
-            let mainContainer = document.querySelector('#opinions');
+    this.create = function () {
+        let mainContainer = document.querySelector('#opinions');
 
-            let opinionContainer = document.createElement('article');
-            mainContainer.appendChild(opinionContainer);
-            opinionContainer.setAttribute('class', 'opinions__opinion__n article flex-row-center');
+        let opinionContainer = document.createElement('article');
+        mainContainer.appendChild(opinionContainer);
+        opinionContainer.setAttribute('class', 'opinions__opinion__n article flex-row-center');
+        opinionContainer.setAttribute('id', 'opinionContainer');
 
-            let clientImg = document.createElement('img');
-            clientImg.setAttribute('src', this.img);
-            clientImg.setAttribute('class', 'opinions__opinion_n__img');
-            opinionContainer.appendChild(clientImg);
+        let clientImg = document.createElement('img');
+        clientImg.setAttribute('src', this.img);
+        clientImg.setAttribute('class', 'opinions__opinion_n__img');
+        opinionContainer.appendChild(clientImg);
 
-            let textDiv = document.createElement('div');
-            textDiv.setAttribute('class', 'opinions__opinion_n__text');
-            opinionContainer.appendChild(textDiv);
+        let textDiv = document.createElement('div');
+        textDiv.setAttribute('class', 'opinions__opinion_n__text');
+        opinionContainer.appendChild(textDiv);
 
-            let heading = document.createElement('h2');
-            heading.setAttribute('class', 'heading heading--white');
-            heading.textContent = this.name;
-            textDiv.appendChild(heading);
+        let heading = document.createElement('h2');
+        heading.setAttribute('class', 'heading heading--white');
+        heading.textContent = this.name;
+        textDiv.appendChild(heading);
 
-            let paragraph = document.createElement('p');
-            paragraph.setAttribute('class', 'paragraph paragraph--white');
-            paragraph.textContent = this.opinion;
-            textDiv.appendChild(paragraph);
-
-
-
+        let paragraph = document.createElement('p');
+        paragraph.setAttribute('class', 'paragraph paragraph--white');
+        paragraph.textContent = this.opinion;
+        textDiv.appendChild(paragraph);
         },
 
-        this.active = () => {
-            let opinionContainer = document.querySelector('.article');
-            opinionContainer.classList.add('opinions__opinion__n--active');
-            button.classList.add('opinions__menu__circle--active');
-        }
+    this.active = () => {
+        let opinionContainer = document.querySelector('.article');
+        opinionContainer.classList.add('opinions__opinion__n--active');
+        button.classList.add('opinions__menu__circle--active');
+    }
 
     this.remove = () => {
 
         let mainContainer = document.querySelector('.article');
         mainContainer.remove();
         button.classList.remove('opinions__menu__circle--active');
-
-
     }
-
 }
+
+
 let mainIndex = 0;
 let dots = document.querySelectorAll('.opinions__menu__circle');
 
@@ -86,7 +83,7 @@ function removeSlide(mainIndex) {
             const promise = clientArray[mainIndex].remove();
             resolve('Usunięty');
             reject(new Error('nieudalo sie usunac'));
-        }, 10000);
+        }, 7000);
     })
 }
 
@@ -97,15 +94,18 @@ async function slideShow(mainIndex) {
     console.log(promiseAcitve);
     let promiseRemove = await removeSlide(mainIndex);
     console.log(promiseRemove);
-
 }
 
-
+dots.forEach((btn, btnindex) => {
+    btn.addEventListener('click', () => {
+        mainIndex = btnindex;
+    })
+});
 
 setInterval(() => {
     slideShow(mainIndex);
     mainIndex++;
-    if(mainIndex==3){
-        mainIndex=0;
+    if (mainIndex == 3) {
+        mainIndex = 0;
     }
-}, 10050);
+}, 7050);
