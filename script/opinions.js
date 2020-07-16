@@ -1,14 +1,15 @@
-function opinionObj(img, name, opinion) {
+function opinionObj(img, name, opinion, button) {
     this.img = img,
         this.name = name,
         this.opinion = opinion,
+        this.button = button,
 
         this.create = function () {
             let mainContainer = document.querySelector('#opinions');
 
             let opinionContainer = document.createElement('article');
             mainContainer.appendChild(opinionContainer);
-            opinionContainer.setAttribute('class', 'opinions__opinion__n flex-row-center article');
+            opinionContainer.setAttribute('class', 'opinions__opinion__n article flex-row-center');
 
             let clientImg = document.createElement('img');
             clientImg.setAttribute('src', this.img);
@@ -28,22 +29,33 @@ function opinionObj(img, name, opinion) {
             paragraph.setAttribute('class', 'paragraph paragraph--white');
             paragraph.textContent = this.opinion;
             textDiv.appendChild(paragraph);
+
+
+
         },
-        this.remove = function () {
-            let mainContainer = document.querySelector('.article');
-            mainContainer.remove();
+
+        this.active = () => {
+            let opinionContainer = document.querySelector('.article');
+            opinionContainer.classList.add('opinions__opinion__n--active');
+            button.classList.add('opinions__menu__circle--active');
         }
-    this.activate = function () {
-        box = document.querySelector('.article');
-        box.classList.add('opinions__opinion__n--active');
-        setTimeout(() => {
-            box.classList.remove('opinions__opinion__n--active');
-        }, 10000)
+
+    this.remove = () => {
+
+        let mainContainer = document.querySelector('.article');
+        mainContainer.remove();
+        button.classList.remove('opinions__menu__circle--active');
+
+
     }
+
 }
-let client0 = new opinionObj('../img/opinions/Natalia.jpg', 'Natalia', 'Lorem ipsum dolor sit amet consectetur adipisicingelit. Ducimus totam saepe doloribus facere tempora, assumenda sunt ipsum esse dolor rem vitaeeveniet necessitatibus. Fugit aut sint vero! Porro, blanditiis quisquam. Lorem ipsum dolor sit esta');
-let client1 = new opinionObj('../img/opinions/Aga.jpg', 'Aga', 'Lorem ipsum dolor sit amet consectetur adipisicingelit. Ducimus totam saepe doloribus facere tempora, assumenda sunt ipsum esse dolor rem vitaeeveniet necessitatibus. Fugit aut sint vero! Porro, blanditiis quisquam. Lorem ipsum dolor sit esta adipisicingelit. Ducimus totam saepe doloribus facere tempora, assumenda sunt');
-let client2 = new opinionObj('../img/opinions/Szymek.jpg', 'Szymek', 'Lorem ipsum dolor sit amet consectetur adipisicingelit assumenda sunt ipsum esse dolor rem vitaeeveniet necessitatibus. Fugit aut sint vero! Porro, blanditiis quisquam. Lorem ipsum dolor sit esta');
+let mainIndex = 0;
+let dots = document.querySelectorAll('.opinions__menu__circle');
+
+let client0 = new opinionObj('../img/opinions/Natalia.jpg', 'Natalia', 'Lorem ipsum dolor sit amet consectetur adipisicingelit. Ducimus totam saepe doloribus facere tempora, assumenda sunt ipsum esse dolor rem vitaeeveniet necessitatibus. Fugit aut sint vero! Porro, blanditiis quisquam. Lorem ipsum dolor sit esta', dots[0]);
+let client1 = new opinionObj('../img/opinions/Aga.jpg', 'Aga', 'Lorem ipsum dolor sit amet consectetur adipisicingelit. Ducimus totam saepe doloribus facere tempora, assumenda sunt ipsum esse dolor rem vitaeeveniet necessitatibus. Fugit aut sint vero! Porro, blanditiis quisquam. Lorem ipsum dolor sit esta adipisicingelit. Ducimus totam saepe doloribus facere tempora, assumenda sunt', dots[1]);
+let client2 = new opinionObj('../img/opinions/Szymek.jpg', 'Szymek', 'Lorem ipsum dolor sit amet consectetur adipisicingelit assumenda sunt ipsum esse dolor rem vitaeeveniet necessitatibus. Fugit aut sint vero! Porro, blanditiis quisquam. Lorem ipsum dolor sit esta', dots[2]);
 
 let clientArray = {
     0: client0,
@@ -51,76 +63,49 @@ let clientArray = {
     2: client2
 };
 
-let dots = document.querySelectorAll('.opinions__menu__circle');
 
-let mainIndex = 0;
-
-async function slidersChanging(){
-    for(let i = 0; i < dots.length; i++){
-        const result = await readySlide(i);
-    }
-}
-
-function readySlide(index) {
-        
-        return new Promise(resolve => {
-            clientArray[index].create();
-            clientArray[index].activate();
-            setTimeout(() => {
-                clientArray[index].remove();
-            }, 10000);
-            resolve('done');
-        })
-}
-
-slidersChanging();
-/* 
-
-
-for(let i = 0; i < dots.length; i++){
-    fullSliders(i);
-}
-
-function fullSliders(index){
-    setTimeout(() => {
-        clientArray[index].create();
-        clientArray[index].activate();
-            clientArray[index].remove();    
-    }, (10000));
-     
-}
-
-   for(let i = 0; i<dots.length; i++){
-     fullSlide(i);
- }
-
-function fullSlide(mainIndex){
-    clientArray[mainIndex].create();
-    clientArray[mainIndex].activate();
-    clientArray[mainIndex].remove();
-   
-}
-  for(let i = 0; i <= circles.length; i++){
-        circles[i].classList.toggle('opinions__menu__circle--active');
-        clientArray[i].create();
-        setTimeout(() => {
-            circles[i].classList.toggle('opinions__menu__circle--active')
-;        }, 1000);
-        setTimeout(clientArray[i].remove(), 1000);
-                                                    
-    }
-      
-
-
-
-/*let slideIndex = 0;
-
-
-circles.forEach((circle, index) => {
-    circle.addEventListener('click', () => {
-        clientArray[index].create();
-        clientArray[index].remove();
-        
+function createSlide(mainIndex) {
+    return new Promise((resolve, reject) => {
+        const promise = clientArray[mainIndex].create();
+        resolve('Stworzony');
+        reject(new Error('nie udalo sie stworzyc'));
     })
-});
-/*/
+}
+
+function activateSlide(mainIndex) {
+    return new Promise((resolve, reject) => {
+        const promise = clientArray[mainIndex].active();
+        resolve('Aktywowany');
+        reject(new Error('nie udało sie aktywowac'));
+    })
+}
+
+function removeSlide(mainIndex) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const promise = clientArray[mainIndex].remove();
+            resolve('Usunięty');
+            reject(new Error('nieudalo sie usunac'));
+        }, 10000);
+    })
+}
+
+async function slideShow(mainIndex) {
+    let promiseCreate = await createSlide(mainIndex);
+    console.log(promiseCreate);
+    let promiseAcitve = await activateSlide(mainIndex);
+    console.log(promiseAcitve);
+    let promiseRemove = await removeSlide(mainIndex);
+    console.log(promiseRemove);
+
+}
+
+
+
+setInterval(() => {
+    slideShow(mainIndex);
+    mainIndex++;
+    if(mainIndex==3){
+        mainIndex=0;
+    }
+}, 10050);
