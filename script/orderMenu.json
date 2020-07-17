@@ -1,0 +1,98 @@
+{
+    "category": [{
+            "id": "01",
+            "name": "sandwithces",
+            "menu-items": [{
+                    "id": "11",
+                    "name": "sandwitch with scrambled eggs",
+                    "position": "1",
+                    "descriptio": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                    "cost": "7$",
+                    "image": "img/menu/1.jpg"
+                },
+                {
+                    "id": "12",
+                    "name": "sandwitch with spinach",
+                    "position": "2",
+                    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                    "cost": "6$",
+                    "image": "img/menu/2.jpg"
+                },
+                {
+                    "id": "13",
+                    "name": "sandwitch with tomato sauce",
+                    "position": "3",
+                    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    "cost": "6.5$",
+                    "image": "img/menu/1.jpg"
+                },
+                {
+                    "id": "14",
+                    "name": "baked bread with shrimp sauce",
+                    "position": "4",
+                    "description": "Duis ut diam quam nulla porttitor. At auctor urna nunc id cursus metus.Magna fringilla urna porttitor rhoncus dolor purus non enim praesent.",
+                    "cost": "8$",
+                    "image": "img/menu/2.jpg"
+                },
+                {
+                    "id": "15",
+                    "name": "baked bread with grilled chwicken",
+                    "position": "5",
+                    "description": "Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Id eu nisl nunc mi ipsum faucibus vitae. Ornare lectus sit amet est.",
+                    "cost": "6$",
+                    "image": "img/menu/1.jpg"
+                }
+            ]
+        }, {
+
+
+            "id": "02",
+            "name": "main dish",
+            "menu-items": [{
+                    "id": "21",
+                    "name": "scrambled eggs with nuts",
+                    "position": "1",
+                    "descriptio": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                    "cost": "7.5$",
+                    "image": "img/menu/1.jpg"
+                },
+                {
+                    "id": "22",
+                    "name": "spinach chicken",
+                    "position": "2",
+                    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                    "cost": "8$",
+                    "image": "img/menu/2.jpg"
+                },
+                {
+                    "id": "23",
+                    "name": "rice with zucchini",
+                    "position": "3",
+                    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    "cost": "9$",
+                    "image": "img/menu/1.jpg"
+                },
+                {
+                    "id": "24",
+                    "name": "pasta with tomato sauce",
+                    "position": "4",
+                    "description": "Duis ut diam quam nulla porttitor. At auctor urna nunc id cursus metus.Magna fringilla urna porttitor rhoncus dolor purus non enim praesent.",
+                    "cost": "5$",
+                    "image": "img/menu/2.jpg"
+                },
+                {
+                    "id": "25",
+                    "name": "pasta with garlic sauce",
+                    "position": "5",
+                    "description": "Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Id eu nisl nunc mi ipsum faucibus vitae. Ornare lectus sit amet est.",
+                    "cost": "4$",
+                    "image": "img/menu/1.jpg"
+                }
+            ]
+        }
+
+    ]
+
+
+
+}
