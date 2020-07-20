@@ -12,3 +12,54 @@
     width: 9rem;
     height: 9rem;
 }
+
+
+
+.order__result{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100vw;
+    height: auto;
+    background-color: var(--teritary-font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+
+.order__result p{
+  
+   padding: .5rem;
+    color: var(--primary-font-color);
+    font-size: 1rem;
+}
+
+.socket{
+    width: 4.5rem;
+    height: 4.5rem;
+    position: fixed;
+    top: 80%;
+    left: 92%;
+    clip-path: circle(40%);
+    background-color: var(--quaternary-font-color);
+    color: var(--primary-font-color);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+}
+.socket:hover{
+    background-color: var(--primary-font-color);
+    color: var(--quaternary-font-color);
+  
+}
+
+.payWindow{
+    width: 50vw;
+    height: 50vh;
+    position: fixed;
+    background-color: khaki;
+}
