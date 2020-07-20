@@ -1,0 +1,14 @@
+.menu__panel{
+
+}
+.menu__mealsList{
+    width: 90vw;
+    margin: 0 auto;
+    border: .1rem solid var( --secondary-font-color);
+    padding: 2rem;
+}
+.mealsList__image{
+    clip-path: circle(40%);
+    width: 9rem;
+    height: 9rem;
+}

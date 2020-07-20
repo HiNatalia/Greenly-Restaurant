@@ -43,6 +43,11 @@ body{
     font-size: 2rem;
     color: var(--quaternary-font-color);
 }
+.paragraph--menu{
+    font-size: 1.5rem;
+    
+    
+}
 
 .btn{
     font-family: 'Noto sans JP';
@@ -55,6 +60,7 @@ body{
     align-items: center;
     text-transform: uppercase;
     color: var(--primary-font-color);
+    border: none;
 }
 
 .btn--green{
@@ -83,6 +89,7 @@ body{
 }
 .icon--green{ 
     fill: var( --quaternary-font-color);
+ 
 
 }
 .icon--blue{
