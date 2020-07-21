@@ -37,11 +37,19 @@
     color: var(--primary-font-color);
     font-size: 1rem;
 }
-
+.socketPanelContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+}
 .socket{
     width: 4.5rem;
     height: 4.5rem;
     position: fixed;
+    z-index: 1;
     top: 80%;
     left: 92%;
     clip-path: circle(40%);
@@ -49,17 +57,70 @@
     color: var(--primary-font-color);
     cursor: pointer;
     transition: all .5s ease-in-out;
-
+    display: none;
 }
 .socket:hover{
     background-color: var(--primary-font-color);
     color: var(--quaternary-font-color);
   
 }
+.socket--active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.payWindow{
+.socketPanel{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: 50vw;
     height: 50vh;
-    position: fixed;
-    background-color: khaki;
+    background-color: var(--secondary-color);
+    border: .1rem solid var(--secondary-font-color-lighter);
+}
+.socket__list{
+    margin-top: .5rem;
+    width: 100%;
+    overflow-y: auto;
+}
+.socket__list__item{
+    width: 100%;
+    position: relative;
+}
+.socket__list__item:hover{
+   background-color: var(--additiona-font-color);
+}
+.socket__list__item:hover .socket__removeBtn{
+    display: block;
+}
+.socket__closeBtn, .socket__removeBtn{
+    background-image: url('../img/icons/close.png');
+    background-position: center;
+    background-size: cover;
+    width: 1rem;
+    height: 1rem;
+
+    cursor: pointer;
+}
+.socket__list__item--totalCost{
+    margin-top: .5rem;
+    text-align: right;
+    display: block;
+    color: var(--quaternary-font-color);
+}
+.socket__removeBtn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-image: url('../img/icons/criss-cross.png');
+    background-position: center;
+    background-size: cover;
+    width: 1rem;
+    height: 1rem;
+
+    cursor: pointer;
+    display: none;
 }

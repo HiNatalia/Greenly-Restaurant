@@ -5,7 +5,9 @@ let menuCategoryMaindishes;
 let socket = [];
 
 
+
 xhttp.onreadystatechange = function () {
+
     if (this.readyState == 4 && this.status == 200) {
         let response = JSON.parse(xhttp.responseText);
         let category = response.category;
@@ -26,6 +28,7 @@ xhttp.onreadystatechange = function () {
         });
     }
 };
+displaySocketIcon();
 xhttp.open("GET", "script/orderMenu.json", true);
 xhttp.send();
 
@@ -68,7 +71,9 @@ function createLayout(categoryMenuItems, index) {
     listItem__text__description.setAttribute('class', 'paragraph');
     listItem__costPanel.setAttribute('class', 'flex-row-center  padding-left-2');
     listItem__costPanel__price.setAttribute('class', 'paragraph paragraph--menu');
-    listItem__costPanel__socket.addEventListener('click', ()=>{addToSocket(categoryMenuItems[index])});
+    listItem__costPanel__socket.addEventListener('click', () => {
+        addToSocket(categoryMenuItems[index])
+    });
 
     listItem__img.setAttribute('src', categoryMenuItems[index].image);
     listItem__text__heading.textContent = categoryMenuItems[index].name;
@@ -79,24 +84,115 @@ function createLayout(categoryMenuItems, index) {
 }
 
 function addToSocket(obj) {
-   
+    
     socket.push(obj)
 
-
     let container = document.body;
-    menuResult = document.createElement('div');
-    container.appendChild(menuResult);
-    menuResult.setAttribute('class', 'order__result');
-    let menuP = document.createElement('p');
-    menuP.setAttribute('class', 'order__resut__p');
-    menuResult.appendChild(menuP);
-    menuP.textContent = `Added to socket: ${obj.name}`;
+    orderResult = document.createElement('div');
+    container.appendChild(orderResult);
+    orderResult.setAttribute('class', 'order__result');
+    let orderP = document.createElement('p');
+    orderP.setAttribute('class', 'order__resut__p');
+    orderResult.appendChild(orderP);
+    orderP.textContent = `Added to socket: ${obj.name}`;
 
-    setTimeout(()=>{
-      document.querySelector('.order__result').remove();
-    },2000);
+    setTimeout(() => {
+        document.querySelector('.order__result').remove();
+    }, 2000);
 
-    let ordered = document.createElement('div');
+}
+
+function displaySocketIcon() {
+
+    let socketInfo = document.getElementById('socket');
+    socketInfo.classList.add('socket--active');
+    socketInfo.addEventListener('click', () => {
+        displaySocketMenu()
+    });
+}
+
+function displaySocketMenu() {
+    
+    let container = document.body;
+    let socketPanelContainer = document.createElement('div');
+    container.appendChild(socketPanelContainer);
+    socketPanelContainer.setAttribute('class', 'socketPanelContainer');
+    socketPanelContainer.setAttribute('id', 'socketPanelContainer');
+    let socketPanel = document.createElement('article');
+    socketPanelContainer.appendChild(socketPanel);
+    socketPanel.setAttribute('class', 'flex-column socketPanel padding-2');
+    let topPanel = document.createElement('div');
+    socketPanel.appendChild(topPanel);
+    topPanel.setAttribute('class', 'flex-row-space-between');
+
+    let heading = document.createElement('h3');
+    topPanel.appendChild(heading);
+    heading.setAttribute('class', 'heading--smaller heading--green');
+    let closeSocket = document.createElement('div');
+    topPanel.appendChild(closeSocket);
+
+    closeSocket.setAttribute('class', 'socket__closeBtn')
+    if (socket.length == 0) {
+        heading.textContent = 'Your socket is empty';
+    } else {
+        heading.textContent = 'Your order';
+    }
+
+
+    let itemListInSocket = document.createElement('ul');
+    itemListInSocket.setAttribute('id', 'socket__list');
+    itemListInSocket.setAttribute('class', 'socket__list');
+    socketPanel.appendChild(itemListInSocket);
+
+
+    let totalCost = 0;
+    socket.forEach((item, index) => {
+        let li = document.createElement('li');
+        itemListInSocket.appendChild(li);
+        li.setAttribute('class', 'flex-row-space-between socket__list__item');
+
+        let spanName = document.createElement('span');
+        li.appendChild(spanName);
+        spanName.textContent = item.name;
+        
+        let spanCost = document.createElement('span');
+        li.appendChild(spanCost);
+        spanCost.textContent = item.cost;
+        
+        let removeItem = document.createElement('div');
+        li.appendChild(removeItem);
+        removeItem.setAttribute('class', 'socket__removeBtn')
+        totalCost = totalCost + parseFloat(item.cost);
+        removeItem.addEventListener('click', () => { socketListRemoveItem(index, item.cost, totalCost)});
+        
+        
+
+    });
+    
+    let liTotalCost = document.createElement('li');
+    itemListInSocket.appendChild(liTotalCost);
+    liTotalCost.setAttribute('class', 'socket__list__item socket__list__item--totalCost');
+    liTotalCost.setAttribute('id', 'liTotalCost');
+    liTotalCost.textContent = `${totalCost}$`;
+
+    closeSocket.addEventListener('click', () => {
+        document.getElementById('socketPanelContainer').remove();
+    })
+}
+function socketListRemoveItem(index, cost, fullCost){
+    
+    let socketList = document.getElementById('socket__list');
+    socketList.removeChild(socketList.childNodes[index]);
+    fullCost = fullCost - parseFloat(cost);
+    document.getElementById('liTotalCost').textContent = `${fullCost}$`;
+    
+    delete socket[index];
+}
+
+
+
+/*
+ let ordered = document.createElement('div');
     let paragraphOrdered = document.createElement('p')
     paragraphOrdered.setAttribute('class', 'paragraph paragraph--green');
     paragraphOrdered.textContent = 'PAY';
@@ -112,18 +208,6 @@ function addToSocket(obj) {
 
     });
 
-    
-    
-}
-
-function displaySocket(){
-
-}
-
-
-
-
-/*
  
         window.onload = () =>{
             for (let i = 0; i < menuCategorySandwitches.menuItems.length; i++) {
