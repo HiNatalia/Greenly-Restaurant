@@ -112,7 +112,8 @@ function displaySocketIcon() {
 }
 
 function displaySocketMenu() {
-    
+    let totalCost = 0;
+
     let container = document.body;
     let socketPanelContainer = document.createElement('div');
     container.appendChild(socketPanelContainer);
@@ -145,7 +146,8 @@ function displaySocketMenu() {
     socketPanel.appendChild(itemListInSocket);
 
 
-    let totalCost = 0;
+    
+
     socket.forEach((item, index) => {
         let li = document.createElement('li');
         itemListInSocket.appendChild(li);
@@ -162,10 +164,17 @@ function displaySocketMenu() {
         let removeItem = document.createElement('div');
         li.appendChild(removeItem);
         removeItem.setAttribute('class', 'socket__removeBtn')
+   
+       
         totalCost = totalCost + parseFloat(item.cost);
-        removeItem.addEventListener('click', () => { socketListRemoveItem(index, item.cost, totalCost)});
-        
-        
+       
+        removeItem.addEventListener('click', () => { 
+            li.remove()
+              
+            delete socket[index];
+            totalCost = totalCost - parseFloat(item.cost);
+            document.getElementById('liTotalCost').textContent = `${totalCost}$`;
+        });
 
     });
     
@@ -179,16 +188,6 @@ function displaySocketMenu() {
         document.getElementById('socketPanelContainer').remove();
     })
 }
-function socketListRemoveItem(index, cost, fullCost){
-    
-    let socketList = document.getElementById('socket__list');
-    socketList.removeChild(socketList.childNodes[index]);
-    fullCost = fullCost - parseFloat(cost);
-    document.getElementById('liTotalCost').textContent = `${fullCost}$`;
-    
-    delete socket[index];
-}
-
 
 
 /*
