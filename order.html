@@ -38,7 +38,7 @@
                     Voluptates, harum magni! sit amet consectetur adipisicing elit.
                     Voluptates</p>
             </span>
-            <a href="" class="btn btn--green margin-top-2">Reservation</a>
+            <a href="index.html#reservation" class="btn btn--green margin-top-2">Reservation</a>
         </article>
 
         <section class="header__data">
@@ -113,34 +113,19 @@
     </header>
 
     <main class="main">
-
-        <section class="menu__panel flex-row-center">
-
-            <button class="btn btn--pink" id="sandwitchesBtn">Sandwitches</button>
-            <button class="btn btn--pink" id="mainDishesBtn">Main dishes</button>
-
+        <section class="main__menu">
+            <section class="menu__panel flex-row-center">
+                <button class="btn btn--green menu__panel__btn" id="sandwichesBtn">Sandwiches</button>
+                <button class="btn btn--green menu__panel__btn" id="mainDishesBtn">Main dishes</button>
+                <button class="btn btn--green menu__panel__btn" id="saladsBtn">Salads</button>
+                <button class="btn btn--green menu__panel__btn" id="pancakesBtn">Pancakes</button>
+                <button class="btn btn--green menu__panel__btn" id="smoothiesBtn">Smoothies</button>
+            </section>
+            <section class="menu__meals">
+                <ul class="menu__mealsList" id="mealsList"></ul>       
+            </section>
         </section>
-        <section class="menu__meals">
-            <ul class="menu__mealsList "  id="mealsList">
-                <!--
-                    <li class="mealsList__item flex-row-center">
-                    <img src="img/menu/1.jpg" alt="" class="mealsList__image">
-                    <div >
-                        <p class="paragraph paragraph--menu">danie nr 1</p>
-                        <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas aliquam
-                            exercitationem sapiente ducimus commodi repellat aliquid incidunt, accusantium quam
-                            similique eligendi accusamus nemo. Veritatis doloribus quisquam nemo, iure ad aperiam.</p>
-                    </div>
-                    <div class="flex-row-center padding-leftRight-2">
-                        <p class="paragraph paragraph--menu">30PLN</p>
-                        <svg id="Capa_1" enable-background="new 0 0 509.275 509.275" height="512" viewBox="0 0 509.275 509.275" width="512" xmlns="http://www.w3.org/2000/svg" class="icon icon--green"><g><path d="m479.637 314.485v-182.744l-360-65v-22.466c0-24.413-19.861-44.275-44.274-44.275h-45.726v30h45.725c7.871 0 14.275 6.404 14.275 14.275v277.005c0 31.979 26.016 57.995 57.995 57.995h12.005v34.187c-6.129-2.686-12.891-4.187-20-4.187-27.57 0-50 22.43-50 50s22.43 50 50 50c25.883 0 47.233-19.769 49.749-45h.251v-85h260v34.187c-6.129-2.686-12.891-4.187-20-4.187-27.57 0-50 22.43-50 50s22.43 50 50 50c25.883 0 47.233-19.769 49.749-45h.251v-115h-332.005c-15.437 0-27.995-12.558-27.995-27.995v-11.796zm-340 164.79c-11.028 0-20-8.972-20-20s8.972-20 20-20 20 8.972 20 20-8.972 20-20 20zm290 0c-11.028 0-20-8.972-20-20s8.972-20 20-20 20 8.972 20 20-8.972 20-20 20zm-160-197.71-60-.833v-167.256l60 10.833zm30-151.839 55 9.931v143.089l-55-.764zm-120 150.589-60-.833v-182.256l60 10.833zm270 3.75-65-.903v-138.089l65 11.736z"/></g></svg>
-                    </div>
-                </li>-->
-                
-            </ul>
-            
-     </section>
-
+       
     </main>
 
     <footer class="footer">
@@ -152,14 +137,13 @@
                     <li><a href="index.html#reservation" class="footer__menu__item">reservation</a></li>
                     <li><a href="order.html" class="footer__menu__item">order</a></li>
                     <li><a href="galery.html" class="footer__menu__item">galery</a></li>
-                    <li><a href="contact" class="footer__menu__item">contact</a></li>
+                    <li><a href="contact.html" class="footer__menu__item">contact</a></li>
                 </ul>
             </div>
-
             <div class="footer__logoSocial padding-leftRight-2">
                 <div class="footer__logoSocial__logo">Greenly Restaurante</div>
                 <p class="paragraph paragraph--white ">Obserwuj nas na:</p>
-                <span class="footer__logoSocial__icons">
+                <span class="footer__logoSocial__icons ">
                     <svg height="511pt" viewBox="0 0 511 511.9" width="511pt" xmlns="http://www.w3.org/2000/svg"
                         class="icon icon--white">
                         <path
@@ -176,9 +160,8 @@
                     </svg>
                 </span>
 
-
             </div>
-            <div class="footer__location padding-leftRight-2">
+            <div class="footer__location padding-leftRight-2 flex-row">
                 <div class="footer__location__text">
                     <span>
                         <paragraph class="paragraph paragraph--white">adress:</paragraph>
@@ -193,8 +176,6 @@
                         <paragraph class="paragraph paragraph--white">e-mail:</paragraph>
                         <paragraph class="paragraph paragraph--white">greenlyRestaurant@gmail.com</paragraph>
                     </span>
-
-
 
                 </div>
                 <div class="footer__location__map">

@@ -16,7 +16,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
     height: 3rem;
 }
 
@@ -28,6 +27,11 @@
     text-decoration: none;
     color: var(--primary-font-color);
     padding: 1rem;
+    opacity: 0.75;
+    transition: .5s opacity ease-in-out;
+}
+.nav__list__item:hover{
+   opacity: 1;
 }
 
 .header__heading-box{

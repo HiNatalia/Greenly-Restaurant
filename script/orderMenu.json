@@ -1,98 +1,275 @@
 {
     "category": [{
             "id": "01",
-            "name": "sandwithces",
+            "name": "sandwiches",
             "menuItems": [{
                     "id": "11",
-                    "name": "Sandwitch with scrambled eggs",
+                    "name": "Sandwich with scrambled eggs",
                     "position": "1",
                     "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
                     "cost": "7$",
-                    "image": "../img/menu/1.jpg"
+                    "image": "../img/menu/sandwiches/1.jpg"
                 },
                 {
                     "id": "12",
-                    "name": "Sandwitch with spinach",
+                    "name": "Sandwich with spinach",
                     "position": "2",
-                    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur  dolore eu f.",
                     "cost": "6$",
-                    "image": "img/menu/2.jpg"
+                    "image": "../img/menu/sandwiches/2.jpg"
                 },
                 {
                     "id": "13",
-                    "name": "Sandwitch with tomato sauce",
+                    "name": "Avocado toast",
                     "position": "3",
                     "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                     "cost": "6.5$",
-                    "image": "img/menu/1.jpg"
+                    "image": "../img/menu/sandwiches/3.jpg"
                 },
                 {
                     "id": "14",
-                    "name": "Baked bread with shrimp sauce",
+                    "name": "Bread with basil leaves and avocado",
                     "position": "4",
                     "description": "Duis ut diam quam nulla porttitor. At auctor urna nunc id cursus metus.Magna fringilla urna porttitor rhoncus dolor purus non enim praesent.",
                     "cost": "8$",
-                    "image": "img/menu/2.jpg"
+                    "image": "../img/menu/sandwiches/4.jpg"
                 },
                 {
                     "id": "15",
-                    "name": "Baked bread with grilled chicken",
+                    "name": "Sandwich with cheese and pesto",
                     "position": "5",
                     "description": "Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Id eu nisl nunc mi ipsum faucibus vitae. Ornare lectus sit amet est.",
                     "cost": "6$",
-                    "image": "img/menu/1.jpg"
+                    "image": "../img/menu/sandwiches/5.jpg"
+                },
+                {
+                    "id": "16",
+                    "name": "Sandwich with sliced egg with green pesto",
+                    "position": "5",
+                    "description": "Faucibus scelerisque eleifend donec pretium sint occaecat cupidatat non proident, sunt in culpa qui vulputate sapien nec. Id eu nisl nunc mi ipsum faucibus vitae. Ornare lectus sit amet est.",
+                    "cost": "6$",
+                    "image": "../img/menu/sandwiches/6.jpg"
                 }
             ]
         }, {
-
-
             "id": "02",
             "name": "main dish",
             "menuItems": [{
                     "id": "21",
-                    "name": "Scrambled eggs with nuts",
+                    "name": "Green vegetables with croutons",
                     "position": "1",
                     "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
                     "cost": "7.5$",
-                    "image": "img/menu/1.jpg"
+                    "image": "../img/menu/maindishes/1.jpg"
                 },
                 {
                     "id": "22",
-                    "name": "Spinach chicken",
+                    "name": "Spaghetti with peppers and zucchini",
                     "position": "2",
-                    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                    "description": "Duis aute irure dolor in cupidatat non proident reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
                     "cost": "8$",
-                    "image": "img/menu/2.jpg"
+                    "image": "../img/menu/maindishes/2.jpg"
                 },
                 {
                     "id": "23",
-                    "name": "Rice with zucchini",
+                    "name": "Cooked meat with beans on honey sauce",
                     "position": "3",
                     "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                     "cost": "9$",
-                    "image": "img/menu/1.jpg"
+                    "image": "../img/menu/maindishes/3.jpg"
                 },
                 {
                     "id": "24",
-                    "name": "Pasta with tomato sauce",
+                    "name": "Rice with zucchi and soft boiled eggs",
                     "position": "4",
                     "description": "Duis ut diam quam nulla porttitor. At auctor urna nunc id cursus metus.Magna fringilla urna porttitor rhoncus dolor purus non enim praesent.",
                     "cost": "5$",
-                    "image": "img/menu/2.jpg"
+                    "image": "../img/menu/maindishes/4.jpg"
                 },
                 {
                     "id": "25",
-                    "name": "Pasta with garlic sauce",
+                    "name": "Cooked potatos with parsley",
                     "position": "5",
                     "description": "Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Id eu nisl nunc mi ipsum faucibus vitae. Ornare lectus sit amet est.",
                     "cost": "4$",
-                    "image": "img/menu/1.jpg"
+                    "image": "../img/menu/maindishes/5.jpg"
+                },
+                {
+                    "id": "26",
+                    "name": "Soft beef with BBQ sauce",
+                    "position": "6",
+                    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fu faucibus scelerisque eleifend donec pretium vulputate sapien nec. Id eu nisl nunc mi ipsum faucibus vitae. Ornare lectus sit amet est.",
+                    "cost": "4$",
+                    "image": "../img/menu/maindishes/6.jpg"
+                }
+            ]
+        }, {
+
+            "id": "03",
+            "name": "salads",
+            "menuItems": [{
+                    "id": "31",
+                    "name": "Cucumber salad",
+                    "position": "1",
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab",
+                    "cost": "8.5$",
+                    "image": "../img/menu/salads/1.jpg"
+                },
+                {
+                    "id": "32",
+                    "name": "Salad with sweet sauce and sprouts",
+                    "position": "2",
+                    "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugittotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+                    "cost": "9$",
+                    "image": "../img/menu/salads/2.jpg"
+                },
+                {
+                    "id": "33",
+                    "name": "Salad with beetroot and spinach",
+                    "position": "3",
+                    "description": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.",
+                    "cost": "6$",
+                    "image": "../img/menu/salads/3.jpg"
+                },
+                {
+                    "id": "34",
+                    "name": "Spinach and chicken salad",
+                    "position": "4",
+                    "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem..",
+                    "cost": "8$",
+                    "image": "../img/menu/salads/4.jpg"
+                },
+                {
+                    "id": "35",
+                    "name": "Salad with feta cheese and tomatos",
+                    "position": "5",
+                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
+                    "cost": "5$",
+                    "image": "../img/menu/salads/5.jpg"
+                },
+                {
+                    "id": "36",
+                    "name": "Sweet and sour salad with cheese",
+                    "position": "6",
+                    "description": "Scelerisque eleifend donec pretium vulputate sapien nec. Id eu nisl nunc mi ipsum faucibus vitae. Ornare lectus sit amet est.",
+                    "cost": "6$",
+                    "image": "../img/menu/salads/6.jpg"
+                }
+            ]
+        },
+        {
+
+            "id": "04",
+            "name": "pancakes",
+            "menuItems": [{
+                    "id": "41",
+                    "name": "Classical pancakes with maple syrup ",
+                    "position": "1",
+                    "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.",
+                    "cost": "8.5$",
+                    "image": "../img/menu/pancakes/1.jpg"
+                },
+                {
+                    "id": "42",
+                    "name": "Pancakes with powdered sugar and blackberries",
+                    "position": "2",
+                    "description": "Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+                    "cost": "7$",
+                    "image": "../img/menu/pancakes/2.jpg"
+                },
+                {
+                    "id": "43",
+                    "name": "Pancakes with toffee sauce and strawberries ",
+                    "position": "3",
+                    "description": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.",
+                    "cost": "8$",
+                    "image": "../img/menu/pancakes/3.jpg"
+                },
+                {
+                    "id": "44",
+                    "name": "Sweet burger with fruit pesto, lemon and banana",
+                    "position": "4",
+                    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+                    "cost": "10$",
+                    "image": "../img/menu/pancakes/4.jpg"
+                },
+                {
+                    "id": "45",
+                    "name": "Chocolate pancakes",
+                    "position": "5",
+                    "description": "Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Id eu nisl nunc mi ipsum faucibus vitae. Ornare lectus sit amet est.",
+                    "cost": "8$",
+                    "image": "../img/menu/pancakes/5.jpg"
+                },
+                {
+                    "id": "46",
+                    "name": "Summer pancakes ",
+                    "position": "6",
+                    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fu faucibus scelerisque eleifend donec pretium vulputate sapien nec. Id eu nisl nunc mi ipsum faucibus vitae. Ornare lectus sit amet est.",
+                    "cost": "9$",
+                    "image": "../img/menu/pancakes/6.jpg"
+                }
+
+
+
+            ]
+
+
+
+        },
+        {
+
+            "id": "05",
+            "name": "smoothie",
+            "menuItems": [{
+                    "id": "51",
+                    "name": "Summer smoothie",
+                    "position": "1",
+                    "description": "Et falli facilisis mnesarchum duo, has modo probatus consetetur ut, no usu noluisse nominati invenire. Vis velit dicit propriae ea. Per timeam legimus tacimates ad, reque movet aliquip id sed.",
+                    "cost": "6.5$",
+                    "image": "../img/menu/smoothies/1.jpg"
+                },
+                {
+                    "id": "52",
+                    "name": "Green smoothie",
+                    "position": "2",
+                    "description": "Duo ad percipit voluptaria, eu duo iriure postulant, ancillae tractatos an eos. An sea fuisset patrioque. Duis aute irure dolor in reprehenderit in.",
+                    "cost": "7$",
+                    "image": "../img/menu/smoothies/2.jpg"
+                },
+                {
+                    "id": "53",
+                    "name": "Blackberries smoothie",
+                    "position": "3",
+                    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    "cost": "6$",
+                    "image": "../img/menu/smoothies/3.jpg"
+                },
+                {
+                    "id": "54",
+                    "name": "Strawberries smoothie with mint leaves",
+                    "position": "4",
+                    "description": "Vel te aperiam moderatius, sea mazim forensibus efficiendi ut. Cum exerci philosophia et, dicunt petentium disputando in vim, dicunt periculis quo ea.",
+                    "cost": "6$",
+                    "image": "../img/menu/smoothies/4.jpg"
+                },
+                {
+                    "id": "55",
+                    "name": "Cranbeery juice",
+                    "position": "5",
+                    "description": "Ei autem platonem concludaturque vim, eripuit omittam per ut. Nam quot perpetua euripidis ne. Solum conceptam eam cu, in mea elit disputationi.",
+                    "cost": "5$",
+                    "image": "../img/menu/smoothies/5.jpg"
+                },
+                {
+                    "id": "56",
+                    "name": "Red milks shake",
+                    "position": "6",
+                    "description": "Pri amet dolor no, persecuti adipiscing ex nec. Ei sonet clita salutandi vel, ignota nostro vis ea. At audire nostrud dolorum duo, te option gubergren disputando eos, fugit integre an pri.",
+                    "cost": "6$",
+                    "image": "../img/menu/smoothies/6.jpg"
                 }
             ]
         }
-
     ]
-
-
-
 }

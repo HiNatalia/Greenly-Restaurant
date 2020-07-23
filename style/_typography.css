@@ -1,7 +1,6 @@
 /*headings, buttons\/*/
 html{
     font-size: 28px;
-   
 }
 
 body{
@@ -50,6 +49,8 @@ body{
 }
 .paragraph--menu{
     font-size: 1.5rem;
+    color: var(--quaternary-font-color);
+    
     
     
 }
@@ -66,6 +67,8 @@ body{
     text-transform: uppercase;
     color: var(--primary-font-color);
     border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .btn--green{
@@ -87,6 +90,7 @@ body{
     width: 1.5rem;
     height: 1.5rem;
     margin: 0 .75rem;
+    cursor: pointer;
 }
 
 .icon--white{

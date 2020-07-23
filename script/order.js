@@ -1,7 +1,10 @@
 var xhttp = new XMLHttpRequest();
 
-let menuCategorySandwitches;
+let menuCategorySandwiches;
 let menuCategoryMaindishes;
+let menuCategorySalads;
+let menuCategoryPanckes;
+let menuCategorySmoothies;
 let socket = [];
 
 
@@ -12,26 +15,43 @@ xhttp.onreadystatechange = function () {
         let response = JSON.parse(xhttp.responseText);
         let category = response.category;
 
-        menuCategorySandwitches = category[0];
+        menuCategorySandwiches = category[0];
         menuCategoryMaindishes = category[1];
+        menuCategorySalads = category[2];
+        menuCategoryPanckes = category[3];
+        menuCategorySmoothies = category[4];
 
         window.onload = () => {
-            displayMenu(menuCategorySandwitches)
+            displayMenu(menuCategorySandwiches);
         }
-        let sandwitchesMenuBtn = document.getElementById('sandwitchesBtn');
+        let sandwitchesMenuBtn = document.getElementById('sandwichesBtn');
         sandwitchesMenuBtn.addEventListener('click', () => {
-            displayMenu(menuCategorySandwitches)
+            displayMenu(menuCategorySandwiches);
         });
         let mainDishesMenuBtn = document.getElementById('mainDishesBtn');
         mainDishesMenuBtn.addEventListener('click', () => {
-            displayMenu(menuCategoryMaindishes)
+            displayMenu(menuCategoryMaindishes);
+        });
+
+        let saladsMenuBtn = document.getElementById('saladsBtn');
+        saladsMenuBtn.addEventListener('click', () => {
+            displayMenu(menuCategorySalads);
+        });
+
+        let pancakesMenuBtn = document.getElementById('pancakesBtn');
+        pancakesMenuBtn.addEventListener('click', () => {
+            displayMenu(menuCategoryPanckes);
+        });
+
+        let smoothiesMenuBtn = document.getElementById('smoothiesBtn');
+        smoothiesMenuBtn.addEventListener('click', () => {
+            displayMenu(menuCategorySmoothies);
         });
     }
 };
 displaySocketIcon();
 xhttp.open("GET", "script/orderMenu.json", true);
 xhttp.send();
-
 
 
 function displayMenu(category) {
@@ -67,8 +87,8 @@ function createLayout(categoryMenuItems, index) {
 
     listItem.setAttribute('class', 'mealsList__item flex-row-center');
     listItem__img.setAttribute('class', 'mealsList__image');
-    listItem__text__heading.setAttribute('class', 'paragraph paragraph--menu');
-    listItem__text__description.setAttribute('class', 'paragraph');
+    listItem__text__heading.setAttribute('class', 'paragraph paragraph--menu ');
+    listItem__text__description.setAttribute('class', 'paragraph paragraph--darkGrey');
     listItem__costPanel.setAttribute('class', 'flex-row-center  padding-left-2');
     listItem__costPanel__price.setAttribute('class', 'paragraph paragraph--menu');
     listItem__costPanel__socket.addEventListener('click', () => {
@@ -84,7 +104,7 @@ function createLayout(categoryMenuItems, index) {
 }
 
 function addToSocket(obj) {
-    
+
     socket.push(obj)
 
     let container = document.body;
@@ -103,7 +123,6 @@ function addToSocket(obj) {
 }
 
 function displaySocketIcon() {
-
     let socketInfo = document.getElementById('socket');
     socketInfo.classList.add('socket--active');
     socketInfo.addEventListener('click', () => {
@@ -125,11 +144,9 @@ function displaySocketMenu() {
     let topPanel = document.createElement('div');
     socketPanel.appendChild(topPanel);
     topPanel.setAttribute('class', 'flex-row-space-between');
-
     let heading = document.createElement('h3');
     topPanel.appendChild(heading);
     heading.setAttribute('class', 'heading--smaller heading--green');
-    
 
     let closeSocket = document.createElement('div');
     topPanel.appendChild(closeSocket);
@@ -141,14 +158,11 @@ function displaySocketMenu() {
         heading.textContent = 'Your order';
     }
 
-
     let itemListInSocket = document.createElement('ul');
     itemListInSocket.setAttribute('id', 'socket__list');
     itemListInSocket.setAttribute('class', 'socket__list');
     socketPanel.appendChild(itemListInSocket);
 
-
-    
 
     socket.forEach((item, index) => {
         let li = document.createElement('li');
@@ -158,147 +172,48 @@ function displaySocketMenu() {
         let spanName = document.createElement('span');
         li.appendChild(spanName);
         spanName.textContent = item.name;
-        
+
         let spanCost = document.createElement('span');
         li.appendChild(spanCost);
         spanCost.textContent = item.cost;
-        
+
         let removeItem = document.createElement('div');
         li.appendChild(removeItem);
         removeItem.setAttribute('class', 'socket__removeBtn')
-   
-       
+
         totalCost = totalCost + parseFloat(item.cost);
-       
-        removeItem.addEventListener('click', () => { 
+
+        removeItem.addEventListener('click', () => {
             li.remove()
-              
+
             delete socket[index];
             totalCost = totalCost - parseFloat(item.cost);
             document.getElementById('liTotalCost').textContent = `${totalCost}$`;
         });
-        
-
     });
-  
-  
+
     let liTotalCost = document.createElement('li');
     itemListInSocket.appendChild(liTotalCost);
     liTotalCost.setAttribute('class', 'socket__list__item socket__list__item--totalCost');
     liTotalCost.setAttribute('id', 'liTotalCost');
     liTotalCost.textContent = `${totalCost}$`;
 
-
     let orderBtn = document.createElement('button');
     orderBtn.textContent = 'ORDER';
     socketPanel.appendChild(orderBtn);
-    orderBtn.setAttribute('class', 'btn btn--green flex-self-end');
-    
-    orderBtn.addEventListener('click', ()=>{
-        if(socket.length ==0){
+    orderBtn.setAttribute('class', 'btn btn--green flex-self-end margin-top-1');
+
+    orderBtn.addEventListener('click', () => {
+        if (socket.length == 0) {
             alert('Socket is empty')
-        }else{
+        } else {
             alert('You order is on way');
             socket = [];
             document.getElementById('socketPanelContainer').remove();
         }
     })
-    
+
     closeSocket.addEventListener('click', () => {
         document.getElementById('socketPanelContainer').remove();
     })
 }
-
-
-/*
- let ordered = document.createElement('div');
-    let paragraphOrdered = document.createElement('p')
-    paragraphOrdered.setAttribute('class', 'paragraph paragraph--green');
-    paragraphOrdered.textContent = 'PAY';
-    ordered.appendChild(paragraphOrdered);
-    container.appendChild(ordered);
-    ordered.setAttribute('class', 'socket flex-center');
-
-    ordered.setAttribute('onclick', () =>{
-        let container = document.body;
-        payWindow = document.createElement('div');
-        container.appendChild(payWindow);
-        payWindow.setAttribute('class', 'flex-column-center payWindow');
-
-    });
-
- 
-        window.onload = () =>{
-            for (let i = 0; i < menuCategorySandwitches.menuItems.length; i++) {
-                createLayout(menuCategorySandwitches.menuItems, i);
-            }
-        }
-        sandwitchesMenuBtn.addEventListener('click', () => {
-            let container = document.getElementById('mealsList');
-            while (container.firstChild) {
-                container.removeChild(container.firstChild);
-            };
-            for (let i = 0; i < menuCategorySandwitches.menuItems.length; i++) {
-                createLayout(menuCategorySandwitches.menuItems, i);
-            }
-        })
-
-        let mainDishesMenuBtn = document.getElementById('mainDishesBtn');
-        mainDishesMenuBtn.addEventListener('click', () => {
-            let container = document.getElementById('mealsList');
-            while (container.firstChild) {
-                container.removeChild(container.firstChild);
-            };
-            for (let i = 0; i < menuCategoryMaindishes.menuItems.length; i++) {
-                createLayout(menuCategoryMaindishes.menuItems, i);
-            }
-        })
-
-
-        
-
-
-    listItem__text.textContent = menuCategorySandwitches[0].name;
-    listItem__img.setAttribute('src', `${menuCategorySandwitches[0].image}`);
-    
-    let categoryMeals = menuCategorySandwitches.menuItems[];
-  categoryItems.forEach(el => { 
-        listItem__img.setAttribute('src', el.image);
-      
-  });
-let sandwitchesBtn = document.getElementById('sandwitchesBtn');
-sandwitchesBtn.addEventListener('click', displayCategory('kiki'));
-
-
-is object 
-
-function isObject(obj){
-    const isObject = obj instanceof Object;
-    console.log(isObject);
-}
-
-
-
-var xhttp = new XMLHttpRequest();
-
-
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-       let response = JSON.parse(xhttp.responseText);
-       let category = response.category;
-        
-       let output = '';
-       for( let i =0; i < category.length; i++){
-           output += '<li>'+category[i].name+'</li>';
-       }
-       document.getElementById('category').innerHTML = output;
-    
-    }
-    
-};
-
-xhttp.open("GET", "script/orderMenu.json", true);
-xhttp.send();
-
-
-/*/

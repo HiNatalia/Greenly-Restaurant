@@ -8,7 +8,10 @@
 
     background-position: center;
     background-repeat: no-repeat; 
-    
+    filter: grayscale(70%);
+}
+.galery__image:hover{
+    filter: grayscale(0%);
 }
 
 .galery__zoomWindow{

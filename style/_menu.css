@@ -1,16 +1,28 @@
-.menu__panel{
 
+.main__menu{
+    width: 100vw;
+    border-top: .25rem solid var( --quaternary-font-color);
+    border-left: .1rem solid var( --quaternary-font-color);
+    border-right: .1rem solid var( --quaternary-font-color);
+    border-bottom: .25rem solid var( --quaternary-font-color);
+   
 }
 .menu__mealsList{
-    width: 90vw;
-    margin: 0 auto;
-    border: .1rem solid var( --secondary-font-color);
+    width:90vw;
+    cursor: pointer;
     padding: 2rem;
 }
+
 .mealsList__image{
+    filter: grayscale(50%);
     clip-path: circle(40%);
     width: 9rem;
     height: 9rem;
+    transition: .5s all ease-in-out;
+   
+}
+.menu__mealsList > :hover .mealsList__image{
+    filter: grayscale(0%);
 }
 
 
@@ -60,8 +72,8 @@
     display: none;
 }
 .socket:hover{
-    background-color: var(--primary-font-color);
-    color: var(--quaternary-font-color);
+    background-color: var(--teritary-font-color);
+   
   
 }
 .socket--active{
