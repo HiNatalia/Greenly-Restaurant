@@ -129,6 +129,8 @@ function displaySocketMenu() {
     let heading = document.createElement('h3');
     topPanel.appendChild(heading);
     heading.setAttribute('class', 'heading--smaller heading--green');
+    
+
     let closeSocket = document.createElement('div');
     topPanel.appendChild(closeSocket);
 
@@ -175,15 +177,33 @@ function displaySocketMenu() {
             totalCost = totalCost - parseFloat(item.cost);
             document.getElementById('liTotalCost').textContent = `${totalCost}$`;
         });
+        
 
     });
-    
+  
+  
     let liTotalCost = document.createElement('li');
     itemListInSocket.appendChild(liTotalCost);
     liTotalCost.setAttribute('class', 'socket__list__item socket__list__item--totalCost');
     liTotalCost.setAttribute('id', 'liTotalCost');
     liTotalCost.textContent = `${totalCost}$`;
 
+
+    let orderBtn = document.createElement('button');
+    orderBtn.textContent = 'ORDER';
+    socketPanel.appendChild(orderBtn);
+    orderBtn.setAttribute('class', 'btn btn--green flex-self-end');
+    
+    orderBtn.addEventListener('click', ()=>{
+        if(socket.length ==0){
+            alert('Socket is empty')
+        }else{
+            alert('You order is on way');
+            socket = [];
+            document.getElementById('socketPanelContainer').remove();
+        }
+    })
+    
     closeSocket.addEventListener('click', () => {
         document.getElementById('socketPanelContainer').remove();
     })
