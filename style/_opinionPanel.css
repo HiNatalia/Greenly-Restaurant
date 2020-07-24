@@ -1,6 +1,6 @@
 .opinions-section{
     background-color: var(--primary-color);
-    height: auto;
+    height:45vh;
 }
 .opinions{
     background-color: var(--primary-color);

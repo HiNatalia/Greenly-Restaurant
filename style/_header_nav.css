@@ -1,7 +1,8 @@
 .header{
     width: 100vw;
-    height: 100vh;
+    height: 100vh
 }
+
 .header-main{
     background: url(../img/sections/main.jpg) right no-repeat fixed;
 }
@@ -16,6 +17,7 @@
     justify-content: space-between;
     align-items: center;
     height: 3rem;
+    
 }
 .nav__list{
     list-style: none;
@@ -32,11 +34,12 @@
    opacity: 1;
 }
 .header__heading-box{
-    min-height: 55vh;
-    width: 50vw;
+    height: min-content;
+    width:50vw;
     background-color: var(--secondary-color);
     box-shadow: 1px 0 6px var(--secondary-font-color-lighter);
 }
+ 
 .data__container{
     height: 3rem;
     background-color: var(--primary-color);
@@ -44,4 +47,21 @@
 }
 .data__container__n{
     margin: 0 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .nav{
+        font-size: 1.5rem;
+    }
+    .header__heading-box{
+        width: max-content;
+        height: min-content;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .nav
+    {
+        font-size: 2.5rem;
+    }
+    
 }

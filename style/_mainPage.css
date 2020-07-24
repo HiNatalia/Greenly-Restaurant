@@ -1,6 +1,7 @@
 .main > * {
     margin: 4.5rem 0;
 }
+
 .about__imgContainer, .menu__imgContainer{
     position: relative;
     height: min-content;
@@ -22,18 +23,15 @@ img{
     width: 18rem;
     position: relative;
 }
-.about__text{
+.about__text, .menu__text{
     width: 40vw; 
-    height: 75vh;  
+    height: min-content;  
 }
 .about__social{
     display: flex;
     align-items: center;
 }
-.menu__text{
-    width: 40vw; 
-    height: 75vh;
-}
+
 .newsletter{
     height: min-content;
     background-color: var(--primary-color);
