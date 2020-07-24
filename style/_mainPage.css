@@ -30,6 +30,7 @@ img{
 .about__social{
     display: flex;
     align-items: center;
+   
 }
 
 .newsletter{
@@ -40,7 +41,7 @@ img{
 .newsletter__form{
     display: flex;
 }
-#map{
+.map{
     margin-left: 2rem;
     width: 300px;
     height: 200px;

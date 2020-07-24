@@ -96,4 +96,27 @@
 .galery__image__15{
     background-image: url('../img/galery/15.jpg');
 }
-
+@media only screen and (max-width: 1000px) {
+    .grid-3-col{
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 90vw;
+    }
+    .galery__image{
+        width: 100%;
+    }
+} 
+@media only screen and (max-width: 800px) {
+    .grid-3-col{
+        grid-template-columns: 1fr 1fr;
+        width: 90vw;
+    }
+    .galery__image{
+        width: 100%;
+    }
+} 
+@media only screen and (max-width: 300px) {
+    .grid-3-col{
+        grid-template-columns: 1fr;
+    }
+  
+} 

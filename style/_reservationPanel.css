@@ -43,6 +43,7 @@ input[type=number] {
 .btn--submit {
     grid-column: 1 /3;
     justify-self: center;
+    border: none;
 }
 .reservation__form__input:focus, .newsletter__form__input:focus{
     outline: none;
@@ -66,3 +67,30 @@ input[type=number] {
     color: var(--primary-font-color);
     font-size: .5rem;
 }
+
+@media only screen and (max-width: 1200px) {
+    .reservation{
+        height: auto;
+        padding: 4rem 0;
+    }
+    .reservation__decorBorder{
+        min-height: 30rem;
+    }
+    .reservation__form__input{
+        width: 25vw;
+        height: 3rem;
+        font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .reservation__form__input{
+        width: 35vw;
+        height: 3rem;
+        font-size: 1.25rem;
+    }
+    .btn--submit{
+        width: 25vw !important;
+        height: 2.5rem !important;
+    }
+} 

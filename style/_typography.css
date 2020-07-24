@@ -8,26 +8,18 @@ html{
         font-size: 20px;
     }
 }
-@media only screen and (max-width: 1000px) {
-    html{
-        font-size: 16px;
-    }
-}
 @media only screen and (max-width: 800px) {
     html{
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 @media only screen and (max-width: 600px) {
     html{
-        font-size: 8px;
+        font-size: 10px;
     }
 }
-@media only screen and (max-width: 300px) {
-    html{
-        font-size: 4px;
-    }
-}
+
+
 body{
     font-family: 'Raleway';
 }
@@ -91,9 +83,7 @@ body{
 .btn--pink{
     background-color: var(--additiona-font-color);
 }
-.btn--submit{
-    border: none;
-}
+
 .btn:hover{
     background-color: var(--teritary-font-color);
     transition: .2s ease-in-out;

@@ -3,6 +3,7 @@
     height: 100vh
 }
 
+
 .header-main{
     background: url(../img/sections/main.jpg) right no-repeat fixed;
 }
@@ -49,19 +50,27 @@
     margin: 0 1rem;
 }
 
+
 @media only screen and (max-width: 1200px) {
-    .nav{
+    .nav__list__item{
         font-size: 1.5rem;
     }
     .header__heading-box{
-        width: max-content;
-        height: min-content;
+        width: 75vw;
     }
-}
-@media only screen and (max-width: 600px) {
-    .nav
-    {
-        font-size: 2.5rem;
+    .data__container__n{
+        margin: 0 .5rem;
     }
-    
+    .nav{
+        background-color: var( --primary-color);
+    }
+    .nav__logo{
+        color: white;
+    }
+    .nav__list__item{
+        opacity: 1;
+    }
+    .header__data{
+        height: 2.5rem;
+    }
 }
