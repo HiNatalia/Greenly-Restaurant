@@ -3,7 +3,6 @@ let form = document.getElementById('form');
 let btnSubmit = document.getElementById('reservation__form__input--submit');
 let errors = [];
 
-
 btnSubmit.addEventListener('click', function (e) {
 
     if (emptyValid() === false) {
@@ -23,14 +22,12 @@ btnSubmit.addEventListener('click', function (e) {
         createErrorsWindow(errors)
         setTimeout(removeResultsWindow, 4000);
         errors = [];
-
     } else if (errors.length == 0) {
         createSuccesWindow();
         setTimeout(removeResultsWindow, 4000);
     }
-    e.preventDefault();
+    e.preventDefault(); //prevent refresh after submit
 }, )
-
 
 
 function emptyValid() {
@@ -49,7 +46,6 @@ function emptyValid() {
 
 function nameValid() {
     let name = formInputs[0].value;
-
     if ((/[0-9]/.test(name)) || (name == '') || (/^ *$/.test(name))) {
         return true;
     } else {
@@ -71,11 +67,9 @@ function createErrorsWindow(errorsTab) {
         reservationResult.appendChild(p);
         p.textContent = error;
     })
-
 }
 
 function createSuccesWindow() {
-
     let container = document.body;
     reservationResult = document.createElement('div');
     container.appendChild(reservationResult);
@@ -87,13 +81,4 @@ function createSuccesWindow() {
 
 function removeResultsWindow() {
     document.querySelector('.reservation__result').remove();
-}
-
-function preventRefresh() {
-    let submitBtn = document.getElementById('reservation__form__input--submit');
-    submitBtn.addEventListener('click', handleEvent);
-
-    function handleEvent(event) {
-        event.preventDefault();
-    }
 }

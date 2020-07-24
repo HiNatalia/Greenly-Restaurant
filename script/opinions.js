@@ -1,3 +1,4 @@
+//prototype of slide object
 function opinionObj(img, name, opinion, button) {
     this.img = img,
     this.name = name,
@@ -46,7 +47,6 @@ function opinionObj(img, name, opinion, button) {
     }
 }
 
-
 let mainIndex = 0;
 let dots = document.querySelectorAll('.opinions__menu__circle');
 
@@ -59,7 +59,6 @@ let clientArray = {
     1: client1,
     2: client2
 };
-
 
 function createSlide(mainIndex) {
     return new Promise((resolve, reject) => {
@@ -86,7 +85,7 @@ function removeSlide(mainIndex) {
         }, 7000);
     })
 }
-
+ //main slide function
 async function slideShow(mainIndex) {
     let promiseCreate = await createSlide(mainIndex);
     console.log(promiseCreate);

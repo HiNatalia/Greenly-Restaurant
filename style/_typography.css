@@ -2,23 +2,18 @@
 html{
     font-size: 28px;
 }
-
 body{
     font-family: 'Raleway';
 }
-
 .heading{
     font-size: 3rem;
     font-weight: normal;
     margin-bottom: 1rem;
-
 }
 .heading--smaller{
     font-size: 2rem;
     font-weight: normal;
- 
 }
-
 .heading--blue{
     color: var(--teritary-font-color);
 }
@@ -28,7 +23,6 @@ body{
 .heading--green{
     color: var(--quaternary-font-color);
 }
-
 .paragraph{
     font-size: 1rem;
 }
@@ -41,7 +35,6 @@ body{
 .paragraph--darkGrey{
     color: var( --secondary-font-color);
 }
-
 .paragraph--decor{
     font-family: 'Dancing Script';
     font-size: 2rem;
@@ -49,12 +42,8 @@ body{
 }
 .paragraph--menu{
     font-size: 1.5rem;
-    color: var(--quaternary-font-color);
-    
-    
-    
+    color: var(--quaternary-font-color);  
 }
-
 .btn{
     font-family: 'Noto sans JP';
     width: 8rem;
@@ -70,9 +59,7 @@ body{
     outline: none;
     cursor: pointer;
 }
-
-.btn--green{
-    
+.btn--green{ 
     background-color: var(--quaternary-font-color);
 }
 .btn--pink{
@@ -85,21 +72,17 @@ body{
     background-color: var(--teritary-font-color);
     transition: .2s ease-in-out;
 }
-
 .icon{
     width: 1.5rem;
     height: 1.5rem;
     margin: 0 .75rem;
     cursor: pointer;
 }
-
 .icon--white{
     fill: var( --primary-font-color);
 }
 .icon--green{ 
     fill: var( --quaternary-font-color);
- 
-
 }
 .icon--blue{
     fill: var(--teritary-font-color); 

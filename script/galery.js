@@ -10,7 +10,6 @@ images.forEach(function (img, index){
         lastOpenedImg = index + 1;
 
         createWindow(imageUrl);
-
     },)
 
 })
@@ -25,7 +24,6 @@ function getUrl(element){
 }
 
 function createWindow(imageUrl){
-
     //window
     let container = document.body;
     let imgWindow = document.createElement('div');
@@ -38,7 +36,6 @@ function createWindow(imageUrl){
     img.setAttribute('src', `../img/galery/${imageUrl}`);
     img.setAttribute('id', 'current-img');
    
-
     //btns 
     let btnNext = document.createElement('a');
     container.appendChild(btnNext);
@@ -52,16 +49,12 @@ function createWindow(imageUrl){
     btnNext.setAttribute('onclick', 'changeImg("next")');
     btnPrev.setAttribute('onclick', 'changeImg("prev")');
     imgWindow.addEventListener('click', closeWindow);
-
 }
-
-
 
 function changeImg(changeType){
    
     document.querySelector('#current-img').remove();
   
-   
     let imgWindow = document.querySelector('.galery__zoomWindow');
     let newImg = document.createElement('img');
     imgWindow.appendChild(newImg);
@@ -82,13 +75,11 @@ function changeImg(changeType){
         }
     }
 
-
     newImg.setAttribute('src', `../img/galery/${newImgIndex}.jpg`);
     newImg.setAttribute('id', 'current-img');
 
     lastOpenedImg = newImgIndex;
 }
-
 
 function closeWindow(){
     document.querySelector('.galery__zoomWindow').remove();

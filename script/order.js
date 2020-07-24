@@ -7,8 +7,7 @@ let menuCategoryPanckes;
 let menuCategorySmoothies;
 let socket = [];
 
-
-
+//connect with json
 xhttp.onreadystatechange = function () {
 
     if (this.readyState == 4 && this.status == 200) {
@@ -49,13 +48,13 @@ xhttp.onreadystatechange = function () {
         });
     }
 };
+
 displaySocketIcon();
 xhttp.open("GET", "script/orderMenu.json", true);
 xhttp.send();
 
 
 function displayMenu(category) {
-
     let container = document.getElementById('mealsList');
     while (container.firstChild) {
         container.removeChild(container.firstChild);
@@ -65,6 +64,7 @@ function displayMenu(category) {
     }
 }
 
+//crate menu list
 function createLayout(categoryMenuItems, index) {
     let container = document.getElementById('mealsList');
     let listItem = document.createElement('li');
@@ -103,6 +103,7 @@ function createLayout(categoryMenuItems, index) {
 
 }
 
+
 function addToSocket(obj) {
 
     socket.push(obj)
@@ -119,17 +120,10 @@ function addToSocket(obj) {
     setTimeout(() => {
         document.querySelector('.order__result').remove();
     }, 2000);
-
 }
 
-function displaySocketIcon() {
-    let socketInfo = document.getElementById('socket');
-    socketInfo.classList.add('socket--active');
-    socketInfo.addEventListener('click', () => {
-        displaySocketMenu()
-    });
-}
 
+//create socket menu after click on socket icon (fun in the end of file)
 function displaySocketMenu() {
     let totalCost = 0;
 
@@ -163,20 +157,17 @@ function displaySocketMenu() {
     itemListInSocket.setAttribute('class', 'socket__list');
     socketPanel.appendChild(itemListInSocket);
 
-
+ //display all items in socket
     socket.forEach((item, index) => {
         let li = document.createElement('li');
         itemListInSocket.appendChild(li);
         li.setAttribute('class', 'flex-row-space-between socket__list__item');
-
         let spanName = document.createElement('span');
         li.appendChild(spanName);
         spanName.textContent = item.name;
-
         let spanCost = document.createElement('span');
         li.appendChild(spanCost);
         spanCost.textContent = item.cost;
-
         let removeItem = document.createElement('div');
         li.appendChild(removeItem);
         removeItem.setAttribute('class', 'socket__removeBtn')
@@ -185,13 +176,12 @@ function displaySocketMenu() {
 
         removeItem.addEventListener('click', () => {
             li.remove()
-
             delete socket[index];
             totalCost = totalCost - parseFloat(item.cost);
             document.getElementById('liTotalCost').textContent = `${totalCost}$`;
         });
     });
-
+//create total cost li and finalization order
     let liTotalCost = document.createElement('li');
     itemListInSocket.appendChild(liTotalCost);
     liTotalCost.setAttribute('class', 'socket__list__item socket__list__item--totalCost');
@@ -212,8 +202,15 @@ function displaySocketMenu() {
             document.getElementById('socketPanelContainer').remove();
         }
     })
-
     closeSocket.addEventListener('click', () => {
         document.getElementById('socketPanelContainer').remove();
     })
+}
+
+function displaySocketIcon() {
+    let socketInfo = document.getElementById('socket');
+    socketInfo.classList.add('socket--active');
+    socketInfo.addEventListener('click', () => {
+        displaySocketMenu()
+    });
 }

@@ -1,7 +1,6 @@
 .header{
     width: 100vw;
     height: 100vh;
-   
 }
 .header-main{
     background: url(../img/sections/main.jpg) right no-repeat fixed;
@@ -18,7 +17,6 @@
     align-items: center;
     height: 3rem;
 }
-
 .nav__list{
     list-style: none;
     display: flex;
@@ -28,29 +26,22 @@
     color: var(--primary-font-color);
     padding: 1rem;
     opacity: 0.75;
-    transition: .5s opacity ease-in-out;
+    transition: .25s opacity ease-in-out;
 }
 .nav__list__item:hover{
    opacity: 1;
 }
-
 .header__heading-box{
-   
-   
     min-height: 55vh;
     width: 50vw;
     background-color: var(--secondary-color);
     box-shadow: 1px 0 6px var(--secondary-font-color-lighter);
 }
-
-
 .data__container{
     height: 3rem;
     background-color: var(--primary-color);
     color: var(--primary-font-color);
 }
-
 .data__container__n{
     margin: 0 1rem;
-   
 }
