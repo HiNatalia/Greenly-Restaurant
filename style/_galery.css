@@ -1,6 +1,6 @@
 
 .galery__image{
-    width: 16.9rem ; /*473.3px x 315/*/
+    width: 100% ; /*473.3px x 315/*/
     min-height: 11.25rem;
     cursor: pointer;
     background-position: center;
@@ -96,27 +96,15 @@
 .galery__image__15{
     background-image: url('../img/galery/15.jpg');
 }
-@media only screen and (max-width: 1000px) {
-    .grid-3-col{
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 90vw;
-    }
-    .galery__image{
-        width: 100%;
-    }
-} 
+
 @media only screen and (max-width: 800px) {
     .grid-3-col{
         grid-template-columns: 1fr 1fr;
-        width: 90vw;
-    }
-    .galery__image{
-        width: 100%;
+       
     }
 } 
 @media only screen and (max-width: 300px) {
     .grid-3-col{
         grid-template-columns: 1fr;
     }
-  
 } 

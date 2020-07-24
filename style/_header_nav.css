@@ -74,3 +74,13 @@
         height: 2.5rem;
     }
 }
+@media only screen and (max-width: 600px) {
+   
+    .nav__logo{
+        display: none;
+    }
+    .nav{
+        justify-content: center;   
+    }
+  
+}

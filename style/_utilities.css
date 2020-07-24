@@ -83,7 +83,7 @@
     grid-template-columns: min-content min-content;
 }
 .grid-3-col {
-    width: min-content;
+    width: 90vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;

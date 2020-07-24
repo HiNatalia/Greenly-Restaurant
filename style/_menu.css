@@ -128,3 +128,9 @@
         left: 90%;
     }
 } 
+@media only screen and (max-width: 600px) {
+    .menu__mealsList > li{
+        margin: .5rem 0;
+    }
+
+  }
