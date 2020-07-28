@@ -1,12 +1,6 @@
 # Greenly-Restaurant
 
-Used technologies: 
--JS ES6 (async/await),
--HTML5, 
--CSS3,
--JSON, 
--GIT,
--BEM.
+Used technologies: JS ES6 (async/await), HTML5, CSS3, JSON, GIT, RWD, BEM.
 
 Website has been prepared by me from the beginning to the end. I used AdobeXD to prepare design. A few things has changed for better ui. Photos are from pexels.com.
 
